@@ -1,0 +1,294 @@
+/*about, contact and membership webpages*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*show the company name in red color and hide the underline of an anchor tag*/
+a{
+  text-decoration: none;
+  color: red;
+}
+
+/* Navbar container */
+.nav {
+  overflow: hidden;
+  background-color: rgb(100, 98, 98);
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.nav a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 20px 90px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* The dropdown container */
+.firstmenu {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.firstmenu a{
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 20px 90px;
+  background-color: inherit;
+  font-family: inherit; 
+}
+
+/* Add a red background color to navbar links on hover */
+.nav a:hover, .firstmenu:hover {
+  background-color: red;
+}
+
+/* Second Menu content (hidden by default) */
+.secondmenu {
+  display: none;
+  position: absolute;
+  top:108px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;    
+}
+
+/* Links inside the second menu */
+.secondmenu li a {
+  float: none;
+  color: black;
+  padding: 20px 90px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to second menu links on hover */
+.secondmenu a:hover {
+  background-color: #ddd;
+}
+
+/* Show the second menu on hover */
+.firstmenu:hover .secondmenu {
+  display: block;
+}
+
+/*hide the dots of the list in navigation area*/
+.secondmenu li{
+  list-style: none;
+}
+
+/*decoration of the body part*/
+body {
+  background-color: #dedede;
+  color: #221811;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+/* decoration for the header part */
+header {
+  background-color: #3f3f3f;
+  height:50px;
+  padding-left: 3.1em;
+  padding-top: 0.01em;
+}
+
+/*membership webpage*/
+/*adjust the anchor tag in the heading 1*/
+h1 a{
+  padding-bottom: 10px;
+}
+
+/*adjust the heading 4 with adding padding*/
+h4{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*adjust the images in membership webpage*/
+#membership img{
+  width: 300px;
+  height: 245px;
+}
+
+/*adjust the list in membership webpage*/
+#membership li{
+  margin-left: 50px;
+}
+
+/*adjust the content box in membership webpage*/
+.content{
+  height: 285px;
+  padding-left: 370px;
+  border-bottom: 2px solid white;
+}
+
+/*adjust the content-non box in membership webpage*/
+.content-non{
+  height: 255px;
+  padding-left: 370px;
+}
+
+/*Adjust the output of the screen width when the width size is 800px*/
+@media only screen and (max-width:800px) {
+  #membership img{
+    width: 200px;
+    height: 200px;
+  }
+
+  #membership li{
+    margin-left: 20px;
+  }
+  
+  .content{
+    padding-left: 255px;
+  }
+
+  .content-non{
+    padding-left: 255px;
+  }
+}
+
+
+
+/*about webpage*/
+/*adjust the about box in about webpage*/
+.about{
+  text-align: center;
+  padding-left: 50px;
+}
+
+/*Make the paragraph same as the code without placing <br> tag*/
+.about p{
+  white-space: pre-line;
+}
+
+
+
+/* Contact Us Part */
+.flex {
+  display: flex;
+}
+
+/*Adding space */
+.form {
+  padding: 40px;
+}
+
+/*Decoration subheading part*/
+.form h2{
+  text-decoration: underline;
+  padding-bottom: 50px;
+}
+
+/*Decoration input tags*/
+input{
+  width: 200px;
+  padding: 15px 15px;
+  display:block;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+
+/*feedback part*/
+textarea{
+  width: 300px;
+  padding: 15px 15px;
+  display:block;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+
+/* button */
+button {
+  border-style: solid;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 8px 22px;
+  overflow: hidden;
+}
+
+/*decoration of the button when mouse hover on it*/
+button:hover {
+  color: black;
+  background-color: white;
+  transition: 0.3s;
+}
+
+
+/*footer*/
+/*a big boxes for footer contain*/
+footer{
+  height:110px;
+  width: 100%;
+  border-top: 1px solid #000000;
+  background:gray;
+  position: absolute;
+  max-width: 1000em;
+}
+
+/*Set the size of the map*/
+iframe{
+  width: 100%;
+}
+
+/*adjust the footer paragraph*/
+footer  p{
+  line-height: 21px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/*adjust the footer paragraph of location part*/
+footer .location p{
+  height: 100px;
+  line-height: 21px;
+  width: 200px;
+  text-align: justify;
+  float: right;
+  padding-right: 50px;
+  font-size: 14px;
+  white-space: pre-line;
+}
+
+/*adjust the subheading in the footer*/
+footer span{
+  line-height: 18px;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bolder;
+  white-space: pre-line;
+  padding-left: 20px;
+}
+
+/*adjust the images in the follow us part*/
+footer .follow img{
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
+  padding-top: 20px;
+  display: block;
+  float: left;
+}
+
+/*adjust the follow box*/
+footer .follow{
+  margin-left: 100px;
+}
+
+

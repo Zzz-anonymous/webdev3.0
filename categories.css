@@ -1,0 +1,314 @@
+/*Decoration for categories,event,portrait and sceneries web pages*/
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+/*show the company name in red color and hide the underline of an anchor tag*/
+h1 a{
+    color: red;
+    text-decoration: none;
+}
+  
+/*decoration of the body part*/
+body {
+    background-color: #dedede;
+    color: #221811;
+    font-family: Verdana, Arial, sans-serif;
+}
+  
+/* decoration for the header part */
+header {
+    background-color: #3f3f3f;
+    height: 50px;
+    padding-left: 3.1em;
+    padding-top: 0.01em;
+}
+
+
+/* Navbar container */
+.nav {
+    overflow: hidden;
+    background-color: rgb(100, 98, 98);
+    font-family: Arial;
+}
+  
+/* Links inside the navbar */
+.nav a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 20px 90px;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+/* The dropdown container */
+.firstmenu {
+    float: left;
+    overflow: hidden;
+}
+  
+/* Dropdown button */
+.firstmenu a{
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 20px 90px;
+    background-color: inherit;
+    font-family: inherit; 
+}
+  
+/* Add a red background color to navbar links on hover */
+.nav a:hover, .firstmenu:hover {
+    background-color: red;
+}
+  
+/* Second Menu content (hidden by default) */
+.secondmenu {
+    display: none;
+    position: absolute;
+    top:108px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;    
+}
+  
+/* Links inside the second menu */
+.secondmenu li a {
+    float: none;
+    color: black;
+    padding: 20px 90px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+/* Add a grey background color to second menu links on hover */
+.secondmenu a:hover {
+    background-color: #ddd;
+}
+  
+/* Show the second menu on hover */
+.firstmenu:hover .secondmenu {
+    display: block;
+}
+  
+/*hide the dots of the list elements*/
+nav li{
+    list-style: none;
+}
+
+
+/*main for categories page*/
+/*set the height and background color of the box*/
+.categories{
+    height: 200px;
+    background-color: dimgray;
+}
+
+/*display the words in center with 70px top padding*/
+.categories h1{
+    text-align: center;
+    padding-top: 70px;
+}
+
+/*Three boxes for the decoration of .sceneries,.fashion,.event*/
+.sceneries,.fashion,.event{
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    max-height: fit-content; 
+    margin-top: 50px;
+}
+
+/*three boxes' picture decoration */
+.sceneries img, .fashion img,.event img{
+    width: 100%;    
+    display: block; 
+}
+
+/*the pictures will transparency slightly when mouse hover on it*/
+.sceneries:hover img, .fashion:hover img,.event:hover img{
+    opacity: 0.6;
+}
+
+/* adjust the subheading of the boxes*/
+main h2{
+    position: absolute;
+    left: 660px;
+    top: 100px;
+    color: rgb(78, 74, 74);
+    /*hide the title of the boxes*/
+    display: none;
+    font-size: 50px;
+}
+
+/*the unordered list of the boxes*/
+main ul{
+    position:absolute;
+    left: 600px;
+    top: 200px;
+    color: #000;
+    /*hide the unordered list of the boxes*/
+    display: none;
+    font-size: 30px;
+}
+
+.sceneries:hover h2,
+.fashion:hover h2,
+.event:hover h2,
+.sceneries:hover ul,
+.fashion:hover ul,
+.event:hover ul{
+    /*display the hidden title and object when mouse hover on the picture*/
+    display: block;
+}
+
+/*subtitle of the boxes*/
+a{
+    text-decoration: none;
+    color: #3f3f3f;
+}
+
+
+/*Change the screen output when the screen width is 1000px */
+@media only screen and (max-width:1000px) {
+    main h2{
+        position: absolute;
+        left: 300px;
+        top: 50px;
+        color: rgb(78, 74, 74);
+        /*hide the title of the boxes*/
+        display: none;
+        font-size: 50px;
+    }
+
+    main ul{
+        position:absolute;
+        left: 200px;
+        top: 150px;
+        color: #000;
+        /*hide the unordered list of the boxes*/
+        display: none;
+        font-size: 30px;
+    }
+}
+
+
+/*Change the screen output when the screen width is 600px */
+@media only screen and (max-width:600px) {
+    main h2{
+        position: absolute;
+        left: 170px;
+        top: 20px;
+        color: rgb(78, 74, 74);
+        /*hide the title of the boxes*/
+        display: none;
+        font-size: 50px;
+    }
+
+    main ul{
+        position:absolute;
+        left: 50px;
+        top: 80px;
+        color: #000;
+        /*hide the unordered list of the boxes*/
+        display: none;
+        font-size: 30px;
+    }
+}
+
+
+
+/*main for event, portrait and sceneries page*/
+.box{
+    /* to make sure 4 pictures in one row */
+    column-count: 4;
+}
+
+/*whole images for event, portrait and sceneries page*/
+.box img{
+    width: 100%;
+    transition: all 2.5s;
+}
+
+.a:hover,.b:hover,.c:hover,.d:hover,.e:hover,
+.f:hover,.g:hover,.h:hover,.i:hover,.j:hover,
+.k:hover,.l:hover,.m:hover,.n:hover,.o:hover,
+.p:hover {
+    /*the picture will become bigger once the mouse hover on it*/
+    transform: scale(1.5);
+}
+
+/*A big boxes for the whole images in three webpages*/
+.box div{
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 3px 3px 3px 3px  rgb(0, 0, 0);
+    padding: 5px;
+    margin: 30px 10px;
+    /*avoid the box break into two parts*/
+    break-inside: avoid;
+    overflow: hidden;
+}
+
+/*footer*/
+/*a big boxes for footer contain*/
+footer{
+    height:110px;
+    width: 100%;
+    border-top: 1px solid #000000;
+    background:gray;
+    position: absolute;
+    max-width: 1000em;
+}
+
+/*adjust the footer paragraph*/
+footer  p{
+    line-height: 21px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/*adjust the footer paragraph of location part*/
+footer .location p{
+    height: 100px;
+    line-height: 21px;
+    width: 200px;
+    text-align: justify;
+    float: right;
+    padding-right: 50px;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+/*adjust the subheading in the footer*/
+footer span{
+    line-height: 18px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bolder;
+    white-space: pre-line;
+    padding-left: 20px;
+}
+
+/*adjust the images in the follow us part*/
+footer .follow img{
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
+    padding-top: 20px;
+    display: block;
+    float: left;
+}
+
+/*adjust the follow box*/
+footer .follow{
+    margin-left: 100px;
+}
+
+
